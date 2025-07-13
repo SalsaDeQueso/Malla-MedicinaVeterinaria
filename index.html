@@ -1,1 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Malla Interactiva Medicina Veterinaria</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Malla Interactiva Medicina Veterinaria</h1>
+  <div class="malla">
+    <button class="ramo" id="Zoologia" data-requisitos="">Zoología</button>
+    <button class="ramo" id="BiologiaCelular" data-requisitos="">Biología Celular</button>
+    <button class="ramo" id="LabBiologia" data-requisitos="">Lab. de Biología</button>
+    <button class="ramo" id="Quimica" data-requisitos="">Química</button>
+    <button class="ramo" id="Matematicas" data-requisitos="">Matemáticas</button>
+    <button class="ramo" id="IntroVet" data-requisitos="">Introducción a Vet.</button>
+
+    <button class="ramo" id="Bioquimica" data-requisitos="BiologiaCelular,LabBiologia,Quimica">Bioquímica</button>
+    <button class="ramo" id="AgresionDefensaI" data-requisitos="BiologiaCelular,LabBiologia">Agresión y Defensa I</button>
+    <button class="ramo" id="CuerpoAnimalI" data-requisitos="Zoologia,BiologiaCelular,LabBiologia">Cuerpo Animal I</button>
+    <button class="ramo" id="HabComunicativas" data-requisitos="">Habilidades Comunicativas</button>
+    <button class="ramo" id="InglesI" data-requisitos="">Inglés I</button>
+
+    <button class="ramo" id="AgresionDefensaII" data-requisitos="AgresionDefensaI,Bioquimica">Agresión y Defensa II</button>
+    <button class="ramo" id="CuerpoAnimalII" data-requisitos="CuerpoAnimalI">Cuerpo Animal II</button>
+    <button class="ramo" id="FuncionDisfuncionI" data-requisitos="CuerpoAnimalI">Función y Disfunción I</button>
+    <button class="ramo" id="MetodosCuantitativos" data-requisitos="Matematicas">Métodos Cuantitativos</button>
+    <button class="ramo" id="RazonamientoCientifico" data-requisitos="HabComunicativas">Razonamiento Científico</button>
+    <button class="ramo" id="InglesII" data-requisitos="InglesI">Inglés II</button>
+
+    <button class="ramo" id="FuncionDisfuncionII" data-requisitos="FuncionDisfuncionI,AgresionDefensaII">Función y Disfunción II</button>
+    <button class="ramo" id="AnatomiaClinica" data-requisitos="FuncionDisfuncionI">Anatomía Clínica</button>
+    <button class="ramo" id="Reproduccion" data-requisitos="FuncionDisfuncionI">Reproducción</button>
+    <button class="ramo" id="FaunaSalvaje" data-requisitos="FuncionDisfuncionI,BiologiaConservacion">Manejo de Fauna Salvaje</button>
+    <button class="ramo" id="EOAcuaticos" data-requisitos="AgresionDefensaII">E. Organismos Acuáticos</button>
+    <button class="ramo" id="Genetica" data-requisitos="Bioquimica,MetodosCuantitativos">Genética</button>
+    <button class="ramo" id="Ecologia" data-requisitos="MetodosCuantitativos">Ecología General</button>
+    <button class="ramo" id="InglesIII" data-requisitos="InglesII">Inglés III</button>
+
+    <button class="ramo" id="Farmacologia" data-requisitos="FuncionDisfuncionII">Farmacología</button>
+    <button class="ramo" id="AnatomiaPatologica" data-requisitos="FuncionDisfuncionII">Anatomía Patológica</button>
+    <button class="ramo" id="PatologiaClinica" data-requisitos="AnatomiaClinica,FuncionDisfuncionII">Patología Clínica</button>
+    <button class="ramo" id="Medicina" data-requisitos="Farmacologia,AnatomiaClinica">Medicina</button>
+    <button class="ramo" id="Nutricion" data-requisitos="Genetica">Nutrición y Alimentación</button>
+    <button class="ramo" id="BiologiaConservacion" data-requisitos="Ecologia">Biología de la Conservación</button>
+    <button class="ramo" id="LegislacionIA" data-requisitos="Ecologia">Legislación IA</button>
+    <button class="ramo" id="InglesIV" data-requisitos="InglesIII">Inglés IV</button>
+
+    <button class="ramo" id="Imagenologia" data-requisitos="AnatomiaPatologica">Imagenología</button>
+    <button class="ramo" id="SPAnimal" data-requisitos="EOAcuaticos,Nutricion,Reproduccion">Sistema Producción Animal</button>
+    <button class="ramo" id="EpidemiologiaSP" data-requisitos="MetodosCuantitativos,FuncionDisfuncionII">Epidemiología y SP</button>
+    <button class="ramo" id="RCientifico" data-requisitos="HabComunicativas">Razonamiento Científico</button>
+    <button class="ramo" id="PensamientoCritico" data-requisitos="RCientifico">Pensamiento Crítico</button>
+
+    <button class="ramo" id="Inocuidad" data-requisitos="EpidemiologiaSP">Inocuidad de los Alimentos</button>
+    <button class="ramo" id="Zoonosis" data-requisitos="Inocuidad">Zoonosis y Enfermedades</button>
+    <button class="ramo" id="Etica" data-requisitos="SPAnimal,FaunaSalvaje">Ética y Bienestar Animal</button>
+    <button class="ramo" id="Formulacion" data-requisitos="LegislacionIA">Formulación Proyectos RRNN</button>
+    <button class="ramo" id="Cirugia" data-requisitos="Imagenologia,Medicina">Cirugía</button>
+    <button class="ramo" id="IntegradorI" data-requisitos="Imagenologia,Medicina">Integrador I: Práctica</button>
+
+    <button class="ramo" id="PatologiaMolecular" data-requisitos="PatologiaClinica">Patobiología Molecular</button>
+    <button class="ramo" id="ProyectoTitulo" data-requisitos="Zoonosis,PatologiaMolecular,Cirugia,Formulacion,IntegradorI">Proyecto de Título</button>
+    <button class="ramo" id="ElectivoI" data-requisitos="Zoonosis,PatologiaMolecular,Cirugia,Formulacion,IntegradorI,Clinica">Electivo Profesional I</button>
+    <button class="ramo" id="ElectivoII" data-requisitos="Zoonosis,PatologiaMolecular,Cirugia,Formulacion,IntegradorI">Electivo Profesional II</button>
+
+    <button class="ramo" id="Clinica" data-requisitos="Cirugia,PatologiaClinica">Clínica</button>
+    <button class="ramo" id="Innovacion" data-requisitos="Formulacion">Innovación y Transferencia</button>
+    <button class="ramo" id="IntegradorII" data-requisitos="Etica,Clinica">Integrador II: Internado</button>
+    <button class="ramo" id="ResponsabilidadSocial" data-requisitos="PensamientoCritico">Responsabilidad Social</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
 
